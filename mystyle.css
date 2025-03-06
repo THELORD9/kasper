@@ -1,8 +1,169 @@
+:root {
+  --main-color: #19c8fa;
+}
+/* global rules*/
 body {
-
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+    background-color: black;
+}
+html {
+  scroll-behavior: smooth
 }
 * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+ul {
+  list-style: none
+}
+
+.container {
+  margin-inline: auto;
+  padding-inline: auto;
+}
+ 
+  /* small */
+ @media (min-width: 576px) { 
+  .container {
+  width: 500px;
+ }
+ }
+ /* medium */
+@media (min-width: 768px) { 
+  .container {
+    width: 750px;
+  }
+}
+ /* large */
+@media (min-width: 992px) { 
+  .container {
+  width: 900px;
+}
+}
+ /* extra large */
+@media (min-width: 1200px) { 
+  .container {
+  width: 800px;
+}
+}
+/* global rules*/
+/* Start header */
+header {
+  position: absolute;
+  width: 100%;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+header .container:after {
+  content: "";
+  width: calc( 100% - 50px );
+  height: 1px;
+  background-color: #a2a2a2;
+  position: absolute;
+  bottom: 0;
+  right: 25px;
+  z-index: -1;
+}
+header .logo img {
+  height: 80px;
+}
+/* small */
+@media (max-width: 576px) {
+  header .logo img {
+    height: 60px;
+  }
+  header .container:after {
+    width: calc( 100% - 20px );
+    left: 15px;
+  }
+}
+header nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+header nav ul {
+  display:flex;
+}
+header nav ul a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 15;
+  padding: 31px 10px;
+  transition: 0.3s;
+}
+header nav ul .active,
+header nav ul a:hover {
+  color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+  z-index: 1;
+}
+.form i {
+  color: #fff;
+  margin-right: 30px;
+  margin-left: 15px;
+  position: relative;
+}
+.form:before {
+  content: "";
+  height: 30%;
+  width: 1px;
+  background-color: #fff;
+  position: absolute;
+}
+@media (max-width: 576px) {
+  .form i {
+    right: 20px;
+  }
+  .form:before {
+    right: 40px;
+  }
+}
+.menu {
+  display: none;
+  } 
+@media (max-width: 576px) {
+  header nav ul a {
+    font-size: 15px;
+    padding: 21px 5px;
+  }
+  header nav ul {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  bottom: -22.9rem;
+  right: 0.3rem;
+  flex-direction: column;
+  visibility: hidden;
+  }
+  .menu {
+  display: block;
+  position: absolute;
+  right: 15px;
+  color: #fff;
+  transition: 0.3s;
+  }
+  .menu:hover {
+    transform: rotate(90deg);
+  }
+  .menu:hover + nav ul {
+    visibility: visible;
+  }
+}
+/* End header */
