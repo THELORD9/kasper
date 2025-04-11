@@ -14,7 +14,8 @@ body {
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
-    background-color: black;
+  background-color: black;
+  color: #fff;
 }
 html {
   scroll-behavior: smooth
@@ -198,18 +199,67 @@ header nav ul a:hover {
   position: absolute;
   top: 25%;
   display: flex;
-  
 }
 .landing .text .content {
   font-size: 12px;
   padding: 30px;
-  padding-left: 50px;
+  padding-left:50px;
+  overflow-y: hidden;
+}
+.landing .text .content h2 {
+  font-weight: normal;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  
+}
+.landing .text .content span {
+  word-spacing: 1px;
 }
 @media (max-width: 576px) {
   .landing .text .content {
-  font-size: 12px;
-  padding: 10px
+  font-size: 10px;
+  padding: 10px;
   }
+  /* 
+  .landing .text .content span {
+  padding-top: 5px;
+  margin-bottom: 5px;
+  } */
+}
+.landing .change-background {
+  position: absolute;
+  top: 37%;
+  transform: translateY(-50%);
+  color: #fff;
+}
+
+@media (max-width: 576px) {
+  .landing .change-background {
+    visibility: hidden;
+  }
+} 
+.landing .fa-angle-left {
+  left: 1%;
+}
+.landing .fa-angle-right {
+  right: 1%;
+}
+.landing ul {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  list-style-type: circle;
+  color: white;
+  display: flex;
+  font-size: 20px
+}
+
+.landing ul li {
+  margin-left: 15px;
+}
+.landing ul li:nth-child(2) {
+  list-style-type: disc;
+  color: var(--main-color);
 }
 /* End landing */
 /* Start services */
