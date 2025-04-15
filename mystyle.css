@@ -267,6 +267,9 @@ header nav ul a:hover {
   word-spacing: 1px;
 }
 @media (max-width: 576px) {
+  .landing .text {
+    width: 100%;
+  }
   .landing .text .content {
   font-size: 10px;
   padding: 10px;
