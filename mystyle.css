@@ -356,5 +356,51 @@ header nav ul a:hover {
 } 
 /* End services */
 /* Start design */
-
+.design {
+  height: 60vh;
+  background-color: #0010BA;
+  position: relative;
+  overflow: hidden;
+}
+.design .image img {
+  height: 300px;
+  position: absolute;
+  top: 150px;
+  left: 120px;
+}
+.design .text {
+  background-color: var(--transparent-color);
+  position: absolute;
+  right: 0;
+  top: 20%;
+  height: 60%;
+  width: 53%;
+  padding-left: 30px;
+  padding-top: 30px;
+}
+.design .text h2 {
+  font-weight: normal;
+  margin-bottom: 40px
+}
+@media (max-width: 576px) {
+  .design .text {
+    width: 100%;
+  }
+  .design .text h2 {
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+  .design .image img {
+  left: 50%;
+}
+}
+.design .text li {
+  margin-top: 20px;
+}
+.design .text li:before {
+  font-family: "font awesome 6 free";
+  content: "\f108";
+  font-weight: 900;
+  margin-right: 10px
+}
 /* End design */
