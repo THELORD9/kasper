@@ -407,3 +407,85 @@ header nav ul a:hover {
   margin-right: 10px
 }
 /* End design */
+/* Start portifolio */
+.portifolio {
+  background-color: white;
+  color: #000;
+}
+.portifolio ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+  background-color: #eee;
+  width: 220px;
+  height: 40px;
+  margin-bottom: 50px
+}
+.portifolio ul li {
+  padding: 10px;
+}
+.portifolio ul .active {
+  background-color: var(--main-color);
+  color: #fff;
+}
+.portifolio .imgs-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+  max-width: 100vw;
+}
+.portifolio .imgs-container .box {
+  position: relative;
+  overflow: hidden;
+  overflow-y: hidden;
+  
+}
+.portifolio .imgs-container .box img{
+  width: 25vw;
+  transition: all 0.2s 0.1s ease-in-out;
+}
+@media (max-width: 576px) {
+  .portifolio .imgs-container .box {
+    margin-inline: auto
+  }
+  .portifolio .imgs-container .box img {
+    width: 350px;
+  }
+}
+.portifolio .imgs-container .box .caption {
+  position: absolute;
+  background-color: white;
+  z-index: 1;
+  bottom: -100%;
+  left: 0;
+  width: 350px;
+  height: 60px;
+  padding: 5px;
+  transition: 0.3s
+}
+.portifolio .caption h4 {
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+.portifolio .caption p {
+  color: var(--main-color);
+}
+.portifolio img:hover {
+  transform: rotate(5deg) scale(1.2)
+}
+.portifolio .box:hover .caption {
+  bottom: 0;
+}
+.portifolio .more {
+  display: grid;
+  place-items: center;
+  margin: 50px;
+  margin-inline: auto;
+  text-align: center;
+  background-color: var(--main-color);
+  width: 60px;
+  height: 30px;
+  color: #fff;
+  text-decoration: uppercase;
+}
+/* End portifolio */
