@@ -556,3 +556,29 @@ header nav ul a:hover {
   padding-inline: 15px
 }
  /* End video */
+/*   Start About */
+.about {
+  height: 70vh;
+  background-color: white;
+  position: relative;
+  overflow-y: hidden;
+}
+.about .img {
+  max-width: 100%;
+  position: absolute;
+  bottom: -120px;
+}
+.about .img img {
+  width: 100%;
+}
+@media (max-width: 576px) {
+  .about {
+    margin-top: -5px;
+    z-index: 5;
+  }
+ .about .img {
+   right: 20px;
+   bottom: -70px;
+ } 
+}
+/*   End About */
